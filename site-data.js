@@ -23,7 +23,7 @@ window.siteData = {
     headline:
       "NYC's data and financial expert who transforms messy data/documents into accurate, polished, and actionable deliverables.",
     valueProposition:
-      "Get expert support without a full-time hire. Privacy-first delivery: no AI systems, no offshoring.",
+      "Get expert support without the full-time hire cost. Privacy-first delivery: no AI systems, no offshoring.",
   },
   orbit: {
     center: "Report / Spreadsheet",
