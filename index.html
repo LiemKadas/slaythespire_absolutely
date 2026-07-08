@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio website for Liem Kadas, an NYC-based data and financial reporting consultant."
+    />
+    <title>Liem Kadas | Data & Financial Reporting</title>
+    <link rel="stylesheet" href="styles.css?v=20260708-3" />
+  </head>
+  <body>
+    <div class="page-background" aria-hidden="true">
+      <svg class="data-ribbons" viewBox="0 0 1440 2400" preserveAspectRatio="none">
+        <path class="ribbon ribbon-one" d="M-80 160 C 180 30, 390 280, 650 150 S 1120 50, 1520 250" />
+        <path class="ribbon ribbon-two" d="M-120 620 C 260 430, 520 760, 850 590 S 1190 510, 1510 700" />
+        <path class="ribbon ribbon-three" d="M-90 1180 C 260 980, 510 1340, 820 1140 S 1160 1020, 1510 1250" />
+        <path class="ribbon ribbon-four" d="M-100 1820 C 170 1670, 520 1970, 780 1770 S 1200 1620, 1530 1910" />
+      </svg>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Liem Kadas home">
+        <span class="brand-mark">LK</span>
+        <span>Liem Kadas</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#portfolio">Samples</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="section hero-section reveal" aria-labelledby="hero-title">
+        <div class="hero-identity" aria-label="Professional identity card">
+          <div class="portrait-frame">
+            <img data-bind-src="assets.headshot" alt="Professional headshot of Liem Kadas" />
+          </div>
+          <div class="identity-copy">
+            <p data-bind-text="person.name"></p>
+            <span data-bind-text="person.title"></span>
+          </div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow" data-bind-text="hero.eyebrow"></p>
+          <h1 id="hero-title" data-bind-text="hero.headline"></h1>
+          <p class="hero-body hero-value-prop">
+            <span class="hero-highlight">
+              <span data-bind-text="hero.valueProposition"></span>
+              <span class="lock-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path class="lock-shackle" d="M15 22v-5.5C15 10.1 19.1 6 24 6s9 4.1 9 10.5V22" />
+                  <rect class="lock-body" x="12" y="20" width="24" height="20" rx="4" />
+                  <circle class="lock-keyhole" cx="24" cy="29" r="2.2" />
+                  <path class="lock-keyhole" d="M24 31v4" />
+                </svg>
+              </span>
+            </span>
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#portfolio">View portfolio</a>
+            <a class="button ghost" href="#contact">Start a conversation</a>
+          </div>
+        </div>
+
+        <div class="orb-system" aria-label="Messy inputs transformed into polished reporting output">
+          <div class="orbit-ring ring-one" aria-hidden="true"></div>
+          <div class="orbit-ring ring-two" aria-hidden="true"></div>
+          <div class="center-orb">
+            <span>Report /<br />Spreadsheet</span>
+          </div>
+          <div class="input-orb orb-pdf">PDFs</div>
+          <div class="input-orb orb-excel">Excel</div>
+          <div class="input-orb orb-csv">CSVs</div>
+          <div class="input-orb orb-media">Audio / Video</div>
+          <div class="input-orb orb-notes">Manual Notes</div>
+          <div class="input-orb orb-messy">Messy Data</div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section portfolio-section reveal" aria-labelledby="portfolio-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="portfolio-title">Five document cards, one clean viewing experience.</h2>
+          <p>
+            Browse the samples horizontally. Open any PDF into a fullscreen viewer and exit without losing your place. All work samples shown on this website use fictional, anonymized, or publicly available data. These examples are for demonstration purposes only and do not represent actual client deliverables.
+          </p>
+        </div>
+
+        <div class="carousel-shell" aria-label="Portfolio PDF carousel">
+          <div class="carousel-controls">
+            <button class="round-button" type="button" data-carousel-prev aria-label="Previous card">←</button>
+            <button class="round-button" type="button" data-carousel-next aria-label="Next card">→</button>
+          </div>
+          <div class="swipe-cue" aria-hidden="true">
+            <span>Swipe</span>
+            <span class="thumb-track">
+              <span class="thumb-mark">☝</span>
+            </span>
+          </div>
+          <div class="carousel-track" data-carousel-track tabindex="0" aria-live="polite"></div>
+          <div class="carousel-dots" data-carousel-dots aria-label="Carousel pagination"></div>
+        </div>
+      </section>
+
+      <section id="credentials" class="section credentials-section reveal" aria-labelledby="credentials-title">
+        <a class="feature-card" data-bind-href="links.featured" target="_blank" rel="noreferrer">
+          <span class="feature-label" data-bind-text="featured.label"></span>
+          <span class="feature-photo">
+            <img data-bind-src="assets.featurePhoto" alt="Poets&amp;Quants feature photo of Liem Kadas" />
+          </span>
+          <strong data-bind-text="featured.publication"></strong>
+          <h2 data-bind-text="featured.title"></h2>
+          <p data-bind-text="featured.meta"></p>
+          <blockquote data-bind-text="featured.quote"></blockquote>
+          <span class="feature-cta">Read the feature →</span>
+        </a>
+
+        <div class="credentials-card">
+          <p class="eyebrow">Operating principles</p>
+          <h2 id="credentials-title">Clear deliverables. Careful handling. Local collaboration.</h2>
+          <ul class="credential-list" data-credentials-list></ul>
+          <div class="logo-row" aria-label="Professional profile links">
+            <a
+              class="logo-link pulse-link"
+              data-bind-href="person.linkedin"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Liem Kadas LinkedIn profile"
+            >
+              <img data-bind-src="assets.linkedinLogo" alt="LinkedIn logo" />
+            </a>
+            <a
+              class="logo-link pulse-link"
+              data-bind-href="links.cmuRanking"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Carnegie Mellon ranking article"
+            >
+              <img data-bind-src="assets.cmuLogo" alt="Carnegie Mellon University logo" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section reveal" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Have a reporting package, spreadsheet, or cleanup project in mind?</h2>
+          <p>
+            For project, contract, retainer, or temporary support inquiries, please reach out by email or LinkedIn.
+          </p>
+          <div class="contact-links">
+            <a data-bind-href-email="person.email" data-bind-text="person.email"></a>
+            <a data-bind-href="person.linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <article class="resume-card" data-resume-card></article>
+      </section>
+    </main>
+
+    <div class="pdf-modal" data-pdf-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+      <div class="modal-backdrop" data-pdf-close></div>
+      <div class="modal-panel">
+        <div class="modal-toolbar">
+          <div>
+            <p class="eyebrow" data-modal-eyebrow>PDF</p>
+            <h2 id="pdf-modal-title" data-modal-title>Document</h2>
+          </div>
+          <div class="modal-actions">
+            <button class="round-button" type="button" data-modal-prev aria-label="Previous document">←</button>
+            <button class="round-button" type="button" data-modal-next aria-label="Next document">→</button>
+            <a class="round-button download-link" data-modal-download href="#" download aria-label="Download current PDF">↓</a>
+            <button class="round-button close-button" type="button" data-pdf-close aria-label="Close PDF viewer">×</button>
+          </div>
+        </div>
+        <iframe data-modal-frame title="PDF preview"></iframe>
+        <div class="modal-page-viewer" data-modal-pages aria-label="Scrollable PDF pages"></div>
+      </div>
+    </div>
+
+    <script src="site-data.js?v=20260708-3"></script>
+    <script src="script.js?v=20260708-3"></script>
+  </body>
+</html>
