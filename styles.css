@@ -546,6 +546,11 @@ h2 {
   margin: 1rem 0 0;
 }
 
+.portfolio-note {
+  font-size: 0.94rem;
+  line-height: 1.62;
+}
+
 .portfolio-section {
   min-height: auto;
 }
