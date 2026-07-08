@@ -1213,6 +1213,17 @@ h2 {
   }
 }
 
+@media (min-width: 1021px) {
+  .section {
+    min-height: min(920px, calc(100vh - 112px));
+    padding: clamp(3.4rem, 6vw, 6.35rem) 0;
+  }
+
+  .hero-section {
+    padding-top: clamp(2.25rem, 4vw, 4.35rem);
+  }
+}
+
 @media (max-width: 1020px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -1257,6 +1268,11 @@ h2 {
   .section {
     width: min(100% - 1rem, var(--max-width));
     padding: 3rem 0;
+  }
+
+  .portfolio-note {
+    font-size: 0.84rem;
+    line-height: 1.52;
   }
 
   .hero-section {
