@@ -25,7 +25,9 @@ window.siteData = {
     valueProposition:
       "Get expert support without the full-time hire cost. Privacy-first delivery: client data is never submitted to AI systems or offshore teams.",
     valuePropositionLead:
-      "Get expert support without the full-time hire cost. Privacy-first delivery: client data is never submitted to AI systems or ",
+      "Get expert support without the full-time hire cost. Privacy-first delivery: client data is ",
+    valuePropositionEmphasis: "never",
+    valuePropositionAfterEmphasis: " submitted to AI systems or ",
     valuePropositionTail: "offshore teams.",
   },
   orbit: {
