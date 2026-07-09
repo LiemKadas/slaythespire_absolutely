@@ -368,7 +368,7 @@ h2 {
   background-position: -0.12em 58%;
   background-repeat: no-repeat;
   background-size: 0% 52%;
-  animation: highlightSweep 2.8s ease-in-out 5 forwards;
+  animation: highlightSweep 2.8s ease-in-out 2 forwards;
 }
 
 .hero-never {
@@ -387,7 +387,7 @@ h2 {
   background: rgba(195, 90, 106, 0.95);
   transform: scaleX(0);
   transform-origin: left center;
-  animation: neverUnderline 2.8s ease-in-out 5 forwards;
+  animation: neverUnderline 2.8s ease-in-out 2 forwards;
 }
 
 .hero-tail-lock {
@@ -420,13 +420,13 @@ h2 {
   stroke-width: 4;
   stroke-linecap: round;
   transform-origin: 24px 22px;
-  animation: lockClose 2.8s cubic-bezier(0.25, 0.85, 0.28, 1) 5 forwards;
+  animation: lockClose 2.8s cubic-bezier(0.25, 0.85, 0.28, 1) 2 forwards;
 }
 
 .lock-body {
   fill: #17211f;
   transform-origin: 24px 30px;
-  animation: lockSettle 2.8s ease-in-out 5 forwards;
+  animation: lockSettle 2.8s ease-in-out 2 forwards;
 }
 
 .lock-keyhole {
