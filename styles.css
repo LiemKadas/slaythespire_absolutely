@@ -371,6 +371,11 @@ h2 {
   animation: highlightSweep 2.8s ease-in-out 5 forwards;
 }
 
+.hero-tail-lock {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .lock-icon {
   display: inline-grid;
   width: 1.48em;

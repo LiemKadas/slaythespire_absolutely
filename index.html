@@ -36,7 +36,7 @@
       content="Data cleanup, financial analysis, and executive-ready reporting for teams that need expert support without the full-time hire cost."
     />
     <meta name="twitter:image" content="https://liemkadas.com/assets/images/liemkadas-social-preview-20260709-v1hd.png" />
-    <link rel="stylesheet" href="styles.css?v=20260709-4" />
+    <link rel="stylesheet" href="styles.css?v=20260709-5" />
   </head>
   <body>
     <div class="page-background" aria-hidden="true">
@@ -83,16 +83,16 @@
           <p class="eyebrow" data-bind-text="hero.eyebrow"></p>
           <h1 id="hero-title" data-bind-text="hero.headline"></h1>
           <p class="hero-body hero-value-prop">
-            <span class="hero-highlight">
-              <span data-bind-text="hero.valueProposition"></span>
-            </span>
-            <span class="lock-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" focusable="false">
-                <path class="lock-shackle" d="M15 22v-5.5C15 10.1 19.1 6 24 6s9 4.1 9 10.5V22" />
-                <rect class="lock-body" x="12" y="20" width="24" height="20" rx="4" />
-                <circle class="lock-keyhole" cx="24" cy="29" r="2.2" />
-                <path class="lock-keyhole" d="M24 31v4" />
-              </svg>
+            <span class="hero-highlight" data-bind-text="hero.valuePropositionLead"></span><span class="hero-tail-lock">
+              <span class="hero-highlight" data-bind-text="hero.valuePropositionTail"></span>
+              <span class="lock-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path class="lock-shackle" d="M15 22v-5.5C15 10.1 19.1 6 24 6s9 4.1 9 10.5V22" />
+                  <rect class="lock-body" x="12" y="20" width="24" height="20" rx="4" />
+                  <circle class="lock-keyhole" cx="24" cy="29" r="2.2" />
+                  <path class="lock-keyhole" d="M24 31v4" />
+                </svg>
+              </span>
             </span>
           </p>
           <div class="hero-actions">
@@ -218,7 +218,7 @@
       </div>
     </div>
 
-    <script src="site-data.js?v=20260709-2"></script>
+    <script src="site-data.js?v=20260709-5"></script>
     <script src="script.js?v=20260709-1"></script>
   </body>
 </html>
