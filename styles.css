@@ -1335,6 +1335,11 @@ h2 {
     line-height: 1.52;
   }
 
+  .hero-value-prop {
+    font-size: 0.98rem;
+    line-height: 1.48;
+  }
+
   .hero-section {
     grid-template-columns: 1fr;
     gap: 1.4rem;
