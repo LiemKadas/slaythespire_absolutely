@@ -151,6 +151,33 @@
     );
   }
 
+  function setupScrollProgress() {
+    const fill = $("[data-scroll-progress-fill]");
+    const label = $("[data-scroll-progress-label]");
+    if (!fill || !label) return;
+
+    let ticking = false;
+
+    function update() {
+      const scrollableHeight = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      const progress = scrollableHeight > 0 ? Math.min(100, Math.max(0, (window.scrollY / scrollableHeight) * 100)) : 100;
+
+      document.documentElement.style.setProperty("--scroll-progress", `${progress}%`);
+      label.textContent = `${Math.round(progress)}%`;
+      ticking = false;
+    }
+
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    update();
+  }
+
   function setupCarousel() {
     const track = $("[data-carousel-track]");
     const prev = $("[data-carousel-prev]");
@@ -410,6 +437,7 @@
     renderResumeCard();
     setupReveals();
     setupBackgroundMotion();
+    setupScrollProgress();
     setupCarousel();
     setupPdfModal();
   }

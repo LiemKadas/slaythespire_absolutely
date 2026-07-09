@@ -108,6 +108,48 @@ textarea {
   stroke: rgba(122, 85, 190, 0.3);
 }
 
+.scroll-progress {
+  position: fixed;
+  right: clamp(0.8rem, 2vw, 1.25rem);
+  bottom: clamp(0.8rem, 2vw, 1.25rem);
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.52rem;
+  padding: 0.42rem 0.55rem;
+  border: 1px solid rgba(23, 33, 31, 0.1);
+  border-radius: 999px;
+  color: rgba(23, 33, 31, 0.58);
+  background: rgba(255, 252, 246, 0.66);
+  box-shadow: 0 14px 34px rgba(48, 39, 28, 0.1);
+  backdrop-filter: blur(14px);
+  font-size: 0.7rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.scroll-progress-track {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 64px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(23, 33, 31, 0.1);
+}
+
+.scroll-progress-track span {
+  display: block;
+  width: var(--scroll-progress, 0%);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(27, 141, 134, 0.82), rgba(49, 95, 198, 0.68));
+  transition: width 140ms ease;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -1268,6 +1310,20 @@ h2 {
   .section {
     width: min(100% - 1rem, var(--max-width));
     padding: 3rem 0;
+  }
+
+  .scroll-progress {
+    right: 0.65rem;
+    bottom: 0.65rem;
+    gap: 0.42rem;
+    padding: 0.36rem 0.44rem;
+    font-size: 0.64rem;
+    opacity: 0.76;
+  }
+
+  .scroll-progress-track {
+    width: 48px;
+    height: 3px;
   }
 
   .portfolio-note {
