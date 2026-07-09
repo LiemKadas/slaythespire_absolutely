@@ -984,6 +984,10 @@ h2 {
   padding: clamp(1.5rem, 3vw, 2.2rem);
 }
 
+#contact-card {
+  scroll-margin-top: 6rem;
+}
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;
