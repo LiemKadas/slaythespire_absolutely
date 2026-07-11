@@ -187,7 +187,8 @@
     let autoplay;
     let carouselInView = false;
     let isPaused = false;
-    const autoplayDelay = 3500;
+    const mobileCarouselQuery = window.matchMedia("(max-width: 720px)");
+    const autoplayDelay = () => (mobileCarouselQuery.matches ? 5000 : 3500);
 
     function cardAt(index) {
       return $(`.portfolio-card[data-index="${index}"]`, track);
@@ -243,7 +244,7 @@
       autoplay = window.setTimeout(() => {
         goTo(activeIndex + 1);
         startAutoplay();
-      }, autoplayDelay);
+      }, autoplayDelay());
     }
 
     function stopAutoplay() {
