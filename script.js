@@ -331,10 +331,18 @@
     const download = $("[data-modal-download]");
     const prev = $("[data-modal-prev]");
     const next = $("[data-modal-next]");
+    const zoomOut = $("[data-modal-zoom-out]");
+    const zoomIn = $("[data-modal-zoom-in]");
+    const zoomLevel = $("[data-modal-zoom-level]");
     const closeButtons = $$("[data-pdf-close]");
     const documents = [...data.portfolio, data.resume].filter(Boolean);
+    const mobileZoomQuery = window.matchMedia("(max-width: 720px)");
+    const minZoom = 75;
+    const maxZoom = 200;
+    const zoomStep = 25;
     let activeIndex = 0;
     let lastFocused = null;
+    let zoomPercent = 100;
 
     function shouldUseRenderedPages(item) {
       const hasPages = Array.isArray(item.pages) && item.pages.length > 0;
@@ -365,6 +373,50 @@
       pageViewer.scrollTop = 0;
     }
 
+    function updateZoomControls() {
+      zoomLevel.textContent = `${zoomPercent}%`;
+      zoomOut.disabled = zoomPercent <= minZoom;
+      zoomIn.disabled = zoomPercent >= maxZoom;
+    }
+
+    function setZoom(nextZoom, preservePosition = true) {
+      if (!mobileZoomQuery.matches || !modalPanel.classList.contains("has-page-viewer")) return;
+
+      const oldScrollWidth = pageViewer.scrollWidth || 1;
+      const oldScrollHeight = pageViewer.scrollHeight || 1;
+      const horizontalRatio =
+        (pageViewer.scrollLeft + pageViewer.clientWidth / 2) / oldScrollWidth;
+      const verticalRatio =
+        (pageViewer.scrollTop + pageViewer.clientHeight / 2) / oldScrollHeight;
+
+      zoomPercent = Math.min(maxZoom, Math.max(minZoom, nextZoom));
+      pageViewer.style.setProperty("--mobile-pdf-zoom", `${zoomPercent}%`);
+      updateZoomControls();
+
+      if (!preservePosition) {
+        pageViewer.scrollLeft = 0;
+        pageViewer.scrollTop = 0;
+        return;
+      }
+
+      window.requestAnimationFrame(() => {
+        pageViewer.scrollLeft = Math.max(
+          0,
+          horizontalRatio * pageViewer.scrollWidth - pageViewer.clientWidth / 2
+        );
+        pageViewer.scrollTop = Math.max(
+          0,
+          verticalRatio * pageViewer.scrollHeight - pageViewer.clientHeight / 2
+        );
+      });
+    }
+
+    function resetZoom() {
+      zoomPercent = 100;
+      pageViewer.style.setProperty("--mobile-pdf-zoom", "100%");
+      updateZoomControls();
+    }
+
     function open(index) {
       const item = documents[index];
       if (!item) return;
@@ -373,6 +425,7 @@
       lastFocused = document.activeElement;
       eyebrow.textContent = item.eyebrow;
       title.textContent = item.title;
+      resetZoom();
 
       if (shouldUseRenderedPages(item)) {
         modalPanel.classList.add("has-page-viewer");
@@ -421,6 +474,9 @@
     closeButtons.forEach((button) => button.addEventListener("click", close));
     prev.addEventListener("click", () => shift(-1));
     next.addEventListener("click", () => shift(1));
+    zoomOut.addEventListener("click", () => setZoom(zoomPercent - zoomStep));
+    zoomIn.addEventListener("click", () => setZoom(zoomPercent + zoomStep));
+    updateZoomControls();
 
     document.addEventListener("keydown", (event) => {
       if (!modal.classList.contains("is-open")) return;

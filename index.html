@@ -36,7 +36,7 @@
       content="Data cleanup, financial analysis, and executive-ready reporting for teams that need expert support without the full-time hire cost."
     />
     <meta name="twitter:image" content="https://liemkadas.com/assets/images/liemkadas-social-preview-20260709-v1hd.png" />
-    <link rel="stylesheet" href="styles.css?v=20260716-1" />
+    <link rel="stylesheet" href="styles.css?v=20260716-2" />
   </head>
   <body>
     <div class="page-background" aria-hidden="true">
@@ -208,18 +208,25 @@
             <h2 id="pdf-modal-title" data-modal-title>Document</h2>
           </div>
           <div class="modal-actions">
-            <button class="round-button" type="button" data-modal-prev aria-label="Previous document">←</button>
-            <button class="round-button" type="button" data-modal-next aria-label="Next document">→</button>
-            <a class="round-button download-link" data-modal-download href="#" download aria-label="Download current PDF">↓</a>
-            <button class="round-button close-button" type="button" data-pdf-close aria-label="Close PDF viewer">×</button>
+            <div class="mobile-zoom-controls" data-modal-zoom-controls aria-label="PDF zoom controls">
+              <button class="round-button zoom-button" type="button" data-modal-zoom-out aria-controls="pdf-page-viewer" aria-label="Zoom out">−</button>
+              <output class="zoom-level" data-modal-zoom-level aria-live="polite">100%</output>
+              <button class="round-button zoom-button" type="button" data-modal-zoom-in aria-controls="pdf-page-viewer" aria-label="Zoom in">+</button>
+            </div>
+            <div class="document-controls">
+              <button class="round-button" type="button" data-modal-prev aria-label="Previous document">←</button>
+              <button class="round-button" type="button" data-modal-next aria-label="Next document">→</button>
+              <a class="round-button download-link" data-modal-download href="#" download aria-label="Download current PDF">↓</a>
+              <button class="round-button close-button" type="button" data-pdf-close aria-label="Close PDF viewer">×</button>
+            </div>
           </div>
         </div>
         <iframe data-modal-frame title="PDF preview"></iframe>
-        <div class="modal-page-viewer" data-modal-pages aria-label="Scrollable PDF pages"></div>
+        <div id="pdf-page-viewer" class="modal-page-viewer" data-modal-pages aria-label="Scrollable PDF pages"></div>
       </div>
     </div>
 
     <script src="site-data.js?v=20260716-1"></script>
-    <script src="script.js?v=20260711-1"></script>
+    <script src="script.js?v=20260716-1"></script>
   </body>
 </html>

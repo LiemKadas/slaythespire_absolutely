@@ -675,6 +675,12 @@ h2 {
   background: #fffaf1;
 }
 
+.round-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+  transform: none;
+}
+
 .carousel-track {
   display: grid;
   grid-auto-flow: column;
@@ -1133,6 +1139,23 @@ h2 {
   gap: 0.5rem;
 }
 
+.document-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mobile-zoom-controls {
+  display: none;
+}
+
+.zoom-level {
+  min-width: 42px;
+  color: rgba(23, 33, 31, 0.7);
+  font-size: 0.72rem;
+  font-weight: 790;
+  text-align: center;
+}
+
 .download-link {
   font-weight: 800;
 }
@@ -1433,6 +1456,13 @@ h2 {
     width: 82px;
   }
 
+  .orb-quickbooks {
+    width: 88px;
+    padding-inline: 0.4rem;
+    font-size: 0.66rem;
+    white-space: nowrap;
+  }
+
   .carousel-controls {
     display: none;
   }
@@ -1495,7 +1525,40 @@ h2 {
 
   .modal-actions {
     width: 100%;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+  }
+
+  .modal-panel.has-page-viewer .mobile-zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .document-controls {
+    gap: 0.3rem;
+    margin-left: auto;
+  }
+
+  .modal-actions .round-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .zoom-level {
+    min-width: 38px;
+    font-size: 0.68rem;
+  }
+
+  .modal-page-viewer {
+    overflow: auto;
+  }
+
+  .modal-page {
+    width: var(--mobile-pdf-zoom, 100%);
+    max-width: none;
   }
 }
 
