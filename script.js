@@ -337,6 +337,7 @@
     const closeButtons = $$("[data-pdf-close]");
     const documents = [...data.portfolio, data.resume].filter(Boolean);
     const mobileZoomQuery = window.matchMedia("(max-width: 720px)");
+    const desktopPdfQuery = window.matchMedia("(min-width: 821px)");
     const minZoom = 75;
     const maxZoom = 200;
     const zoomStep = 25;
@@ -434,7 +435,8 @@
       } else {
         modalPanel.classList.remove("has-page-viewer");
         pageViewer.innerHTML = "";
-        frame.src = `${item.pdf}#view=FitH`;
+        const initialView = desktopPdfQuery.matches ? "zoom=110" : "view=FitH";
+        frame.src = `${item.pdf}#${initialView}`;
       }
 
       download.href = item.pdf;
