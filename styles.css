@@ -552,51 +552,60 @@ h2 {
   font-size: 0.72rem;
   font-weight: 760;
   line-height: 1.12;
+  transform: translate(-50%, -50%);
   animation: orbFloat 12s ease-in-out infinite alternate;
 }
 
+.orb-quickbooks {
+  top: 8%;
+  left: 50%;
+  --drift-x: 8px;
+  --drift-y: -8px;
+  animation-duration: 15s;
+}
+
 .orb-pdf {
-  top: 6%;
-  right: 21%;
+  top: 24%;
+  left: 79%;
   --drift-x: 13px;
   --drift-y: -9px;
 }
 
 .orb-excel {
-  top: 33%;
-  left: 2%;
+  top: 59%;
+  left: 14%;
   --drift-x: -10px;
   --drift-y: 13px;
   animation-duration: 14s;
 }
 
 .orb-csv {
-  right: 1%;
-  top: 40%;
+  top: 59%;
+  left: 86%;
   --drift-x: 12px;
   --drift-y: 12px;
   animation-duration: 13s;
 }
 
 .orb-media {
-  bottom: 10%;
-  right: 20%;
+  top: 87%;
+  left: 66%;
   --drift-x: -8px;
   --drift-y: 12px;
   animation-duration: 15s;
 }
 
 .orb-notes {
-  left: 18%;
-  bottom: 4%;
+  top: 87%;
+  left: 34%;
   --drift-x: 11px;
   --drift-y: 10px;
   animation-duration: 16s;
 }
 
 .orb-messy {
-  left: 28%;
-  top: 8%;
+  top: 24%;
+  left: 21%;
   --drift-x: -9px;
   --drift-y: -12px;
   animation-duration: 17s;
@@ -1200,11 +1209,11 @@ h2 {
 
 @keyframes orbFloat {
   from {
-    transform: translate(0, 0);
+    transform: translate(-50%, -50%);
   }
 
   to {
-    transform: translate(var(--drift-x), var(--drift-y));
+    transform: translate(-50%, -50%) translate(var(--drift-x), var(--drift-y));
   }
 }
 
