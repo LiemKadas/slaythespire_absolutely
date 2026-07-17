@@ -371,6 +371,25 @@ h2 {
   animation: highlightSweep 2.8s ease-in-out 2 forwards;
 }
 
+.hero-cost-emphasis {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-cost-emphasis::after {
+  content: "";
+  position: absolute;
+  left: -0.03em;
+  right: -0.03em;
+  bottom: -0.01em;
+  height: 0.12em;
+  border-radius: 999px;
+  background: rgba(195, 90, 106, 0.95);
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: costUnderline 2.8s ease-in-out 2 forwards;
+}
+
 .hero-tail-lock {
   display: inline-block;
   white-space: nowrap;
@@ -1247,6 +1266,17 @@ h2 {
   }
 }
 
+@keyframes costUnderline {
+  0% {
+    transform: scaleX(0);
+  }
+
+  44%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+
 @keyframes lockClose {
   0%,
   18% {
@@ -1548,6 +1578,10 @@ h2 {
 
   .hero-highlight {
     background-size: 100% 58%;
+  }
+
+  .hero-cost-emphasis::after {
+    transform: scaleX(1);
   }
 
   .lock-shackle,
