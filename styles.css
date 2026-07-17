@@ -1414,10 +1414,10 @@ h2 {
 
   .hero-identity {
     display: grid;
-    width: min(100%, 420px);
-    grid-template-columns: 104px 1fr;
+    width: min(94%, 400px);
+    grid-template-columns: 96px 1fr;
     align-items: center;
-    padding: 0.72rem;
+    padding: 0.66rem;
     border-radius: 999px;
     transform: none;
   }
@@ -1428,8 +1428,21 @@ h2 {
   }
 
   .identity-copy {
-    padding: 0 0.9rem;
+    padding: 0 0.82rem;
     text-align: left;
+  }
+
+  .identity-copy p {
+    font-size: 1.16rem;
+  }
+
+  .identity-copy span {
+    font-size: 0.91rem;
+    line-height: 1.32;
+  }
+
+  .hero-copy > .eyebrow {
+    font-size: 0.72rem;
   }
 
   h1 {
