@@ -22,13 +22,9 @@ window.siteData = {
     eyebrow: "Data cleanup. Financial analysis. Executive-ready reporting.",
     headline:
       "NYC's data and financial expert who transforms messy data/documents into accurate, polished, and actionable deliverables.",
-    valueProposition:
-      "Get expert support without the full-time hire cost. Privacy-first delivery: client data is never submitted to AI systems or offshore teams.",
     valuePropositionLead:
-      "Get expert support without the full-time hire cost. Privacy-first delivery: client data is ",
-    valuePropositionEmphasis: "never",
-    valuePropositionAfterEmphasis: " submitted to AI systems or ",
-    valuePropositionTail: "offshore teams.",
+      "Flexible expert support for projects, recurring reporting, and part-time engagements—without the commitment of an ",
+    valuePropositionTail: "additional full-time hire.",
   },
   orbit: {
     center: "Report / Spreadsheet",
@@ -132,10 +128,9 @@ window.siteData = {
   credentials: [
     "10+ years of experience.",
     "Client data is never submitted to generative AI systems.",
-    "No offshoring.",
     "CIPP/US certification in progress.",
     "Built for data ranging from small files to large datasets, with reporting cadences from daily to monthly or ad hoc.",
-    "Available for project-based, contract, retainer, or temporary support, including hybrid collaboration in or near the New York City metropolitan area.",
+    "Available for part-time roles, project-based engagements, contract work, retainer support, or temporary assignments, including hybrid collaboration in or near the New York City metropolitan area.",
   ],
   featured: {
     label: "Featured profile",

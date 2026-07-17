@@ -371,25 +371,6 @@ h2 {
   animation: highlightSweep 2.8s ease-in-out 2 forwards;
 }
 
-.hero-never {
-  position: relative;
-  display: inline-block;
-}
-
-.hero-never::after {
-  content: "";
-  position: absolute;
-  left: -0.03em;
-  right: -0.03em;
-  bottom: -0.01em;
-  height: 0.12em;
-  border-radius: 999px;
-  background: rgba(195, 90, 106, 0.95);
-  transform: scaleX(0);
-  transform-origin: left center;
-  animation: neverUnderline 2.8s ease-in-out 2 forwards;
-}
-
 .hero-tail-lock {
   display: inline-block;
   white-space: nowrap;
@@ -1266,18 +1247,6 @@ h2 {
   }
 }
 
-@keyframes neverUnderline {
-  0%,
-  28% {
-    transform: scaleX(0);
-  }
-
-  52%,
-  100% {
-    transform: scaleX(1);
-  }
-}
-
 @keyframes lockClose {
   0%,
   18% {
@@ -1579,10 +1548,6 @@ h2 {
 
   .hero-highlight {
     background-size: 100% 58%;
-  }
-
-  .hero-never::after {
-    transform: scaleX(1);
   }
 
   .lock-shackle,
