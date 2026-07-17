@@ -25,8 +25,8 @@ window.siteData = {
     valuePropositionLead:
       "Flexible expert support for projects, recurring reporting, and part-time engagements—",
     valuePropositionEmphasis: "without the cost",
-    valuePropositionAfterEmphasis: " of an ",
-    valuePropositionTail: "additional full-time hire.",
+    valuePropositionAfterEmphasis: " of ",
+    valuePropositionTail: "a full-time hire.",
   },
   orbit: {
     center: "Report / Spreadsheet",
