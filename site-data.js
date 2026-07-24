@@ -19,7 +19,8 @@ window.siteData = {
     featurePhoto: "assets/images/poets-quants-feature.jpg",
   },
   hero: {
-    eyebrow: "Data cleanup. Financial analysis. Executive-ready reporting.",
+    eyebrowLead: "Data cleanup. Financial analysis.",
+    eyebrowTail: "Executive-ready reporting.",
     headline:
       "NYC's data and financial expert who transforms messy data/documents into accurate, polished, and actionable deliverables.",
     valuePropositionLead:

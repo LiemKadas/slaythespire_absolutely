@@ -311,6 +311,10 @@ textarea {
   text-transform: uppercase;
 }
 
+.hero-eyebrow-tail::before {
+  content: " ";
+}
+
 h1,
 h2,
 p {
@@ -1443,6 +1447,14 @@ h2 {
 
   .hero-copy > .eyebrow {
     font-size: 0.68rem;
+  }
+
+  .hero-eyebrow-tail {
+    display: block;
+  }
+
+  .hero-eyebrow-tail::before {
+    content: "";
   }
 
   h1 {
