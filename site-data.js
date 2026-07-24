@@ -23,7 +23,7 @@ window.siteData = {
     headline:
       "NYC's data and financial expert who transforms messy data/documents into accurate, polished, and actionable deliverables.",
     valuePropositionLead:
-      "Flexible expert support for projects, recurring reporting, and part-time engagements—",
+      "Flexible expert support for projects, contract work, recurring reporting, and part-time engagements—",
     valuePropositionEmphasis: "without the cost",
     valuePropositionAfterEmphasis: " of ",
     valuePropositionTail: "a full-time hire.",
