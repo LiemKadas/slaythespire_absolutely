@@ -23,11 +23,8 @@ window.siteData = {
     eyebrowTail: "Executive-ready reporting.",
     headline:
       "NYC's data and financial expert who transforms messy data/documents into accurate, polished, and actionable deliverables.",
-    valuePropositionLead:
-      "Flexible expert support for projects, contract work, recurring reporting, and part-time engagements—",
-    valuePropositionEmphasis: "without the cost",
-    valuePropositionAfterEmphasis: " of ",
-    valuePropositionTail: "a full-time hire.",
+    valueProposition:
+      "Flexible expert support for hybrid partnerships in or near the New York metropolitan area.",
   },
   orbit: {
     center: "Report / Spreadsheet",
@@ -122,9 +119,9 @@ window.siteData = {
     title: "Liem's Resume",
     description:
       "A concise view of my professional background, operating experience, and data-focused service profile.",
-    pdf: "assets/pdfs/liem-kadas-resume.pdf?v=20260720-1",
-    preview: "assets/previews/resume.png?v=20260720-1",
-    pages: ["assets/pdf-pages/resume-20260708/page-1.png?v=20260720-1"],
+    pdf: "assets/pdfs/liem-kadas-resume.pdf?v=20260727-1",
+    preview: "assets/previews/resume.png?v=20260727-1",
+    pages: ["assets/pdf-pages/resume-20260708/page-1.png?v=20260727-1"],
     button: "Open Resume",
     accent: "blue",
   },
@@ -133,7 +130,7 @@ window.siteData = {
     "Client data is never submitted to generative AI systems.",
     "CIPP/US certification in progress.",
     "Built for data ranging from small files to large datasets, with reporting cadences from daily to monthly or ad hoc.",
-    "Available for part-time roles, project-based engagements, contract work, retainer support, or temporary assignments, including hybrid collaboration in or near the New York City metropolitan area.",
+    "My services are industry-agnostic: I apply data analysis and financial reporting across multiple industries, including fintech, nonprofit, healthcare, tourism, and technology.",
   ],
   featured: {
     label: "Featured profile",
