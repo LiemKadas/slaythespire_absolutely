@@ -130,7 +130,7 @@ window.siteData = {
     "Client data is never submitted to generative AI systems.",
     "CIPP/US certification in progress.",
     "Built for data ranging from small files to large datasets, with reporting cadences from daily to monthly or ad hoc.",
-    "My services are industry-agnostic: I apply data analysis and financial reporting across multiple industries, including fintech, nonprofit, healthcare, tourism, and technology.",
+    "My background is industry-agnostic: I have applied data analysis and financial reporting across multiple industries, including fintech, nonprofit, healthcare, tourism, and technology.",
   ],
   featured: {
     label: "Featured profile",
