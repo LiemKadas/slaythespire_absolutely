@@ -300,6 +300,7 @@ textarea {
   color: var(--muted);
   font-size: 0.96rem;
   line-height: 1.35;
+  white-space: pre-line;
 }
 
 .eyebrow {

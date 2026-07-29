@@ -1,7 +1,7 @@
 window.siteData = {
   person: {
     name: "Liem Kadas",
-    title: "Independent Data & Financial Reporting Consultant",
+    title: "Data & Financial Reporting.\n10+ years of experience.",
     location: "New York City Metropolitan Area",
     email: "liem.kadas@gmail.com",
     linkedin: "https://www.linkedin.com/in/liem-sffrkadas/",
