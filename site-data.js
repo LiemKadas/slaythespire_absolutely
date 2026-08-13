@@ -119,9 +119,9 @@ window.siteData = {
     title: "Liem's Resume",
     description:
       "A concise view of my professional background, operating experience, and data-focused service profile.",
-    pdf: "assets/pdfs/liem-kadas-resume.pdf?v=20260812-1",
-    preview: "assets/previews/resume.png?v=20260812-1",
-    pages: ["assets/pdf-pages/resume-20260708/page-1.png?v=20260812-1"],
+    pdf: "assets/pdfs/liem-kadas-resume.pdf?v=20260813-1",
+    preview: "assets/previews/resume.png?v=20260813-1",
+    pages: ["assets/pdf-pages/resume-20260708/page-1.png?v=20260813-1"],
     button: "Open Resume",
     accent: "blue",
   },
