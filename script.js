@@ -412,9 +412,9 @@
       });
     }
 
-    function resetZoom() {
-      zoomPercent = 100;
-      pageViewer.style.setProperty("--mobile-pdf-zoom", "100%");
+    function resetZoom(defaultZoom = 100) {
+      zoomPercent = defaultZoom;
+      pageViewer.style.setProperty("--mobile-pdf-zoom", `${defaultZoom}%`);
       updateZoomControls();
     }
 
@@ -426,9 +426,10 @@
       lastFocused = document.activeElement;
       eyebrow.textContent = item.eyebrow;
       title.textContent = item.title;
-      resetZoom();
+      const useRenderedPages = shouldUseRenderedPages(item);
+      resetZoom(useRenderedPages && mobileZoomQuery.matches ? 150 : 100);
 
-      if (shouldUseRenderedPages(item)) {
+      if (useRenderedPages) {
         modalPanel.classList.add("has-page-viewer");
         frame.src = "about:blank";
         renderPageStack(item);
