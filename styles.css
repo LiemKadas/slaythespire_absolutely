@@ -665,6 +665,20 @@ h2 {
   padding: 1.2rem 1.2rem 0;
 }
 
+.preview-trigger {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.preview-trigger:focus-visible {
+  outline: 3px solid var(--card-accent);
+  outline-offset: -0.2rem;
+}
+
 .pdf-preview {
   width: min(84%, 360px);
   max-height: 360px;

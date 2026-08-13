@@ -58,9 +58,9 @@
       card.dataset.index = index;
 
       card.innerHTML = `
-        <div class="preview-wrap">
+        <button class="preview-wrap preview-trigger" type="button" data-open-pdf="${index}" aria-label="Open ${item.title}">
           <img class="pdf-preview" src="${item.preview}" alt="Preview of ${item.title}" loading="lazy" />
-        </div>
+        </button>
         <div class="card-copy">
           <p class="eyebrow">${item.eyebrow}</p>
           <h3>${item.title}</h3>
@@ -91,9 +91,9 @@
     const item = data.resume;
     card.style.setProperty("--card-accent", accentMap[item.accent] || accentMap.blue);
     card.innerHTML = `
-      <div class="resume-preview-wrap">
+      <button class="resume-preview-wrap preview-trigger" type="button" data-open-resume aria-label="Open ${item.title}">
         <img class="pdf-preview" src="${item.preview}" alt="Preview of ${item.title}" loading="lazy" />
-      </div>
+      </button>
       <div class="card-copy">
         <p class="eyebrow">${item.eyebrow}</p>
         <h3>${item.title}</h3>
