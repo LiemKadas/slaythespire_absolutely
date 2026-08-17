@@ -24,7 +24,7 @@ window.siteData = {
     headline:
       "NYC's data and financial expert who transforms messy data/documents into accurate, polished, and actionable deliverables.",
     valueProposition:
-      "Flexible expert support for hybrid partnerships in or near the New York metropolitan area.",
+      "Currently located in New York City. Open for collaborations anywhere in the U.S.",
   },
   orbit: {
     center: "Report / Spreadsheet",
