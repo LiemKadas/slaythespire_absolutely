@@ -363,19 +363,6 @@ h2 {
   font-weight: 720;
 }
 
-.hero-highlight {
-  display: inline;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  padding: 0.02em 0.06em 0.08em 0;
-  border-radius: 0.22em;
-  background-image: linear-gradient(100deg, rgba(250, 218, 98, 0.08), rgba(250, 218, 98, 0.5) 82%, rgba(250, 218, 98, 0));
-  background-position: -0.12em 58%;
-  background-repeat: no-repeat;
-  background-size: 0% 52%;
-  animation: highlightSweep 2.8s ease-in-out 2 forwards;
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1208,17 +1195,6 @@ h2 {
   }
 }
 
-@keyframes highlightSweep {
-  0% {
-    background-size: 0% 52%;
-  }
-
-  44%,
-  100% {
-    background-size: calc(100% - 0.22em) 52%;
-  }
-}
-
 @keyframes thumbSwipe {
   0%,
   100% {
@@ -1501,10 +1477,6 @@ h2 {
   .reveal {
     opacity: 1;
     transform: none;
-  }
-
-  .hero-highlight {
-    background-size: 100% 58%;
   }
 
 }
