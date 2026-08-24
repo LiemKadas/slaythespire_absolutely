@@ -118,7 +118,7 @@ window.siteData = {
     eyebrow: "Resume",
     title: "Liem's Resume",
     description:
-      "A concise view of my professional background, operating experience, and data-focused service profile.",
+      "A concise view of my professional background, showcasing my most relevant experience and skillset.",
     pdf: "assets/pdfs/liem-kadas-resume.pdf?v=20260815-1",
     preview: "assets/previews/resume.png?v=20260815-1",
     pages: ["assets/pdf-pages/resume-20260708/page-1.png?v=20260815-1"],
