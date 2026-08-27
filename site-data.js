@@ -128,7 +128,7 @@ window.siteData = {
   credentials: [
     "10+ years of experience.",
     "Client data is never submitted to generative AI systems.",
-    "CIPP/US certification in progress.",
+    "Razor-sharp precision in reconciliation.",
     "Built for data ranging from small files to large datasets, with reporting cadences from daily to monthly or ad hoc.",
     "My background is industry-agnostic: I have applied data analysis and financial reporting across multiple industries, including fintech, nonprofit, healthcare, tourism, and technology.",
   ],
